@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRealm - Twój Portal do Wirtualnej Rzeczywistości</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="vr-container">
+        <nav class="vr-nav">
+            <div class="logo">VRealm</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#experiences">Doświadczenia</a></li>
+                <li><a href="#equipment">Sprzęt</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <header id="home" class="vr-header">
+            <div class="profile-overlay"></div>
+            <div class="header-content">
+                <div class="profile-image">
+                    <img src="vrow-profile.jpg" alt="Profil VRowy">
+                </div>
+                <div class="profile-info">
+                    <h1>Witaj w Świecie <span class="highlight">Wirtualnej Rzeczywistości</span></h1>
+                    <p class="tagline">Przekraczaj granice rzeczywistości, twórz niesamowite doświadczenia</p>
+                    <div class="cta-buttons">
+                        <a href="#experiences" class="btn primary">Odkryj więcej</a>
+                        <a href="https://booksy.pl" target="_blank" class="btn secondary" id="booking-btn">
+                            <i class="fas fa-calendar-check"></i> Umów wizytę
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="experiences" class="vr-section">
+                <h2 class="section-title">Wirtualne <span class="highlight">Doświadczenia</span></h2>
+                <div class="experience-cards">
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-vr-cardboard"></i></div>
+                        <h3>Immersyjne podróże</h3>
+                        <p>Odwiedź egzotyczne lokalizacje bez wychodzenia z domu</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-gamepad"></i></div>
+                        <h3>Gry VR</h3>
+                        <p>Doświadcz gier na zupełnie nowym poziomie immersji</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-book"></i></div>
+                        <h3>Edukacja VR</h3>
+                        <p>Ucz się przez interaktywne doświadczenia edukacyjne</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="vr-section about-section">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">O <span class="highlight">Mnie</span></h2>
+                        <p>Jestem pasjonatem technologii VR z wieloletnim doświadczeniem w tworzeniu immersyjnych doświadczeń cyfrowych. Moja przygoda z wirtualną rzeczywistością rozpoczęła się ponad 5 lat temu i od tego czasu nieustannie zgłębiam nowe możliwości, jakie oferuje ta rewolucyjna technologia.</p>
+                        <p>Specjalizuję się w projektowaniu doświadczeń VR, które przekraczają granice konwencjonalnej rozrywki i edukacji. Moim celem jest tworzenie światów, które inspirują, uczą i dostarczają niezapomnianych wrażeń.</p>
+                        <div class="stats">
+                            <div class="stat">
+                                <span class="number">50+</span>
+                                <span class="label">Projektów VR</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">200+</span>
+                                <span class="label">Zadowolonych klientów</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">5+</span>
+                                <span class="label">Lat doświadczenia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="vr-section">
+                <h2 class="section-title">Skontaktuj się <span class="highlight">Ze Mną</span></h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>kontakt@vrealm.pl</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+48 123 456 789</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Warszawa, Polska</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="booking-card">
+                        <h3>Chcesz umówić się na spotkanie?</h3>
+                        <p>Kliknij poniżej, aby zarezerwować termin konsultacji VR</p>
+                        <a href="https://booksy.pl" target="_blank" class="btn secondary" id="booking-btn-footer">
+                            <i class="fas fa-calendar-check"></i> Umów wizytę
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="vr-footer">
+            <div class="footer-content">
+                <div class="footer-logo">VRealm</div>
+                <div class="footer-copyright">
+                    &copy; 2023 VRealm. Wszystkie prawa zastrzeżone.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
