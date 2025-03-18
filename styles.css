@@ -395,8 +395,9 @@ body {
     min-width: 300px;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
+    align-items: stretch;
 }
 
 .equipment-image {
@@ -405,8 +406,9 @@ body {
     overflow: hidden;
     box-shadow: var(--card-shadow);
     transition: var(--transition);
-    width: 100%;
+    width: calc(50% - 0.75rem); /* Równa szerokość z odstępem */
     max-width: 300px;
+    flex-grow: 1;
 }
 
 .equipment-image:hover {
@@ -416,8 +418,8 @@ body {
 
 .equipment-image img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
+    height: 220px; /* Stała wysokość dla wszystkich zdjęć */
+    object-fit: cover; /* Zachowuje proporcje, przycinając w razie potrzeby */
     display: block;
     transition: transform 0.5s ease;
 }
@@ -572,10 +574,21 @@ body {
     
     .equipment-images {
         order: 1;
+        flex-direction: row;
+    }
+    
+    .equipment-image {
+        width: calc(50% - 0.75rem);
     }
     
     .equipment-description {
         order: 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .equipment-image {
+        width: 100%; /* Na mniejszych ekranach zdjęcia będą jeden pod drugim */
     }
 }
 
