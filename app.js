@@ -14,6 +14,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // Track booking button clicks
     trackBookingButtonClicks();
 });
+
+// Inicjalizacja Facebook SDK
+window.fbAsyncInit = function() {
+    FB.init({
+        appId      : 'YOUR_APP_ID', // Wstaw swój Facebook App ID
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v10.0'
+    });
+    FB.AppEvents.logPageView();   
+};
+
+// Funkcja sprawdzająca stan logowania
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+}
+
+// Funkcja obsługująca zmianę stanu logowania
+function statusChangeCallback(response) {
+    if (response.status === 'connected') {
+        // Użytkownik jest zalogowany i autoryzowany
+        registerVisit();
+    } else {
+        // Użytkownik nie jest zalogowany, wywołaj logowanie
+        FB.login(function(response) {
+            if (response.authResponse) {
+                registerVisit();
+            }
+        }, {scope: 'public_profile,email'});
+    }
+}
+
+// Funkcja rejestrująca wizytę
+function registerVisit() {
+    FB.api('/me', function(response) {
+        console.log('Zarejestrowano wizytę dla: ' + response.name);
+        alert('Wizyta zarejestrowana dla: ' + response.name);
+    });
+}
+
 function implementSmoothScrolling() {
     const navLinks = document.querySelectorAll('.nav-links a');
     navLinks.forEach(link => {
