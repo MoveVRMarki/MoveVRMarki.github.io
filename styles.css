@@ -416,7 +416,7 @@ body {
 
 .equipment-image img {
     width: 100%;
-    height: 300px; /* Zwiększona wysokość */
+    height: auto; /* Zmieniona wysokość na auto */
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
@@ -432,6 +432,42 @@ body {
     padding: 10px;
     text-align: center;
     font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .equipment-content {
+        flex-direction: column;
+    }
+    
+    .equipment-images {
+        order: 1;
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+    }
+    
+    .equipment-image {
+        width: 100%;
+    }
+    
+    .equipment-description {
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .equipment-images {
+        flex-direction: column;
+    }
+    
+    .equipment-image {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .equipment-image img {
+        height: 250px;
+    }
 }
 
 /* Contact Section */
@@ -578,7 +614,7 @@ body {
     }
     
     .equipment-image {
-        width: 48%;
+        width: 100%;
     }
     
     .equipment-description {
