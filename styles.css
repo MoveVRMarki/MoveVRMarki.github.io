@@ -392,7 +392,7 @@ body {
 
 .equipment-images {
     flex: 1;
-    min-width: 300px;
+    min-width: 400px;
     display: flex;
     gap: 1.5rem;
     justify-content: space-between;
