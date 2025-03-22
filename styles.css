@@ -406,7 +406,7 @@ body {
     box-shadow: var(--card-shadow);
     transition: var(--transition);
     width: 68%; /* Szerokość zmieniona na procentową */
-    flex: 0 0 48%; /* Zapobiega rozciąganiu */
+    flex: 0 0 68%; /* Zapobiega rozciąganiu */
 }
 
 .equipment-image:hover {
