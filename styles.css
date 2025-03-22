@@ -405,7 +405,7 @@ body {
     overflow: hidden;
     box-shadow: var(--card-shadow);
     transition: var(--transition);
-    width: 48%; /* Szerokość zmieniona na procentową */
+    width: 68%; /* Szerokość zmieniona na procentową */
     flex: 0 0 48%; /* Zapobiega rozciąganiu */
 }
 
