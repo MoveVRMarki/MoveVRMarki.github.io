@@ -392,7 +392,7 @@ body {
 
 .equipment-images {
     flex: 1;
-    min-width: 400px;
+    min-width: 300px;
     display: flex;
     gap: 1.5rem;
     justify-content: space-between;
@@ -405,8 +405,8 @@ body {
     overflow: hidden;
     box-shadow: var(--card-shadow);
     transition: var(--transition);
-    width: 68%; /* Szerokość zmieniona na procentową */
-    flex: 0 0 68%; /* Zapobiega rozciąganiu */
+    width: 48%; /* Szerokość zmieniona na procentową */
+    flex: 0 0 48%; /* Zapobiega rozciąganiu */
 }
 
 .equipment-image:hover {
