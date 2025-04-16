@@ -59,9 +59,23 @@
                         <a href="#experiences" class="btn primary">
                             <i class="fas fa-vr-cardboard"></i> Odkryj więcej
                         </a>
-                        <a href="https://www.facebook.com/profile.php?id=61572027485277" target="_blank" class="btn secondary" id="booking-btn">
-                            <i class="fas fa-calendar-check"></i> Umów sesję
-                        </a>
+                        <!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3d2jm4XLInhcvd6YrKZfGtViaUn6UHhCXxqkT7ye3gxmjSPLNoMbPy--exN12akGdEHqHW-KNk?gv=true',
+      color: '#039BE5',
+      label: "Umów sesję grania w wirtualnej rzeczywistości",
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
                     </div>
                 </div>
             </div>
