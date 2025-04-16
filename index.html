@@ -59,23 +59,18 @@
                         <a href="#experiences" class="btn primary">
                             <i class="fas fa-vr-cardboard"></i> Odkryj więcej
                         </a>
-                        <!-- Google Calendar Appointment Scheduling begin -->
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<script>
-(function() {
-  var target = document.currentScript;
-  window.addEventListener('load', function() {
-    calendar.schedulingButton.load({
-      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3d2jm4XLInhcvd6YrKZfGtViaUn6UHhCXxqkT7ye3gxmjSPLNoMbPy--exN12akGdEHqHW-KNk?gv=true',
-      color: '#039BE5',
-      label: "Umów sesję grania w wirtualnej rzeczywistości",
-      target,
-    });
-  });
-})();
-</script>
-<!-- end Google Calendar Appointment Scheduling -->
+                        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3d2jm4XLInhcvd6YrKZfGtViaUn6UHhCXxqkT7ye3gxmjSPLNoMbPy--exN12akGdEHqHW-KNk?gv=true" 
+                           target="_blank" 
+                           class="btn secondary">
+                            <i class="fas fa-calendar-check"></i> Umów sesję grania w wirtualnej rzeczywistości
+                        </a>
+                        <!-- Google Calendar functionality is preserved but UI is hidden -->
+                        <div style="display: none;">
+                            <!-- Google Calendar Appointment Scheduling begin -->
+                            <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                            <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                            <!-- end Google Calendar Appointment Scheduling -->
+                        </div>
                     </div>
                 </div>
             </div>
