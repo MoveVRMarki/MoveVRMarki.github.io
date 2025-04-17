@@ -1533,15 +1533,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Minecraft YouTube Short section */
+.minecraft-section-wrapper {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
 .minecraft-video-section {
     position: relative;
-    padding: 4rem 1rem;
-    margin: 3rem 0;
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
     overflow: hidden;
     background-image: url('wallpaper_minecraft_java_edition_2560x1440.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .minecraft-overlay {
@@ -1557,23 +1564,22 @@ h1, h2, h3, h4, h5, h6 {
 .minecraft-content {
     position: relative;
     z-index: 2;
-    max-width: 900px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 .minecraft-video-section .section-title {
     color: #fff;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
 }
 
 .youtube-shorts-container {
-    margin: 2rem auto;
-    max-width: 400px;
+    width: 315px;
+    height: 560px;
+    margin: 0 auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-radius: var(--border-radius);
     overflow: hidden;
-    aspect-ratio: 9/16;
-    height: 600px;
 }
 
 .youtube-shorts-container iframe {
@@ -1582,23 +1588,21 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
 }
 
-/* Responsive adjustments for YouTube videos */
+/* Responsive adjustments for YouTube Shorts */
 @media screen and (max-width: 768px) {
-    .youtube-container iframe {
-        height: 300px;
-    }
-    
     .youtube-shorts-container {
-        height: 450px;
+        width: 280px;
+        height: 500px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .youtube-container iframe {
-        height: 200px;
+    .minecraft-video-section {
+        padding: 2rem 1rem;
     }
     
     .youtube-shorts-container {
-        height: 350px;
+        width: 240px;
+        height: 426px;
     }
 }
