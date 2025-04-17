@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
     implementTypingEffect();
     // Implement back to top button
     implementBackToTop();
-    // Implement counter animation
-    implementCounterAnimation();
     // Animate skill bars
     animateSkillBars();
     // Add special highlight for Games tab
