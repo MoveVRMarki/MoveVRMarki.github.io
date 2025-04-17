@@ -1514,17 +1514,33 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    position: relative;
-    overflow: hidden;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.05);
     border-radius: var(--border-radius);
     box-shadow: var(--card-shadow);
+    max-width: 900px;
+    overflow: hidden;
 }
 
 .youtube-container iframe {
-    border-radius: var(--border-radius);
     width: 100%;
-    max-width: 800px;
-    height: 450px;
+    height: 500px;
     border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #000;
+}
+
+/* Responsive adjustments for YouTube videos */
+@media screen and (max-width: 768px) {
+    .youtube-container iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .youtube-container iframe {
+        height: 200px;
+    }
 }
