@@ -1606,3 +1606,123 @@ h1, h2, h3, h4, h5, h6 {
         height: 426px;
     }
 }
+
+/* --- Pricing Table Styles --- */
+#pricing {
+    background-color: #1a1a1a; /* Lekko inny odcień tła dla wyróżnienia */
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.pricing-table-container {
+    max-width: 800px; /* Maksymalna szerokość tabeli */
+    margin: 40px auto; /* Centrowanie i margines góra/dół */
+    background-color: #252525; /* Tło dla kontenera tabeli */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0; /* Kolor tekstu */
+    text-align: center; /* Wyśrodkowanie tekstu w kontenerze */
+}
+
+.pricing-intro {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+.pricing-table-container table {
+    width: 100%;
+    border-collapse: collapse; /* Usuwa podwójne ramki */
+    margin-bottom: 30px; /* Odstęp pod tabelą */
+}
+
+.pricing-table-container th,
+.pricing-table-container td {
+    padding: 15px 12px; /* Wewnętrzne odstępy w komórkach */
+    text-align: left; /* Wyrównanie tekstu do lewej w komórkach */
+    border-bottom: 1px solid #444; /* Linia oddzielająca wiersze */
+}
+
+.pricing-table-container th {
+    background-color: #007bff; /* Kolor tła nagłówka (dopasuj do swojego highlight) */
+    color: #ffffff; /* Kolor tekstu nagłówka */
+    font-weight: 600;
+    text-transform: uppercase; /* Wielkie litery */
+    letter-spacing: 0.5px;
+}
+
+/* Wyrównanie ostatniej kolumny (cena) do prawej */
+.pricing-table-container th:last-child,
+.pricing-table-container td:last-child {
+    text-align: right;
+}
+
+.pricing-table-container td.price {
+    font-weight: bold;
+    color: #00bcd4; /* Kolor ceny (dopasuj do swojego highlight) */
+    font-size: 1.1em;
+}
+
+/* Zebra striping - naprzemienne tła wierszy dla czytelności */
+.pricing-table-container tbody tr:nth-child(even) {
+    background-color: #2f2f2f; /* Tło dla parzystych wierszy */
+}
+
+/* Styl dla wiersza z informacją promocyjną */
+.pricing-table-container td.promo-info {
+    background-color: rgba(0, 188, 212, 0.1); /* Lekkie tło promo */
+    text-align: center;
+    font-style: italic;
+    color: #00bcd4; /* Kolor tekstu promo */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: none; /* Usunięcie dolnej linii dla tego wiersza */
+}
+
+.pricing-table-container td.promo-info i {
+    margin-right: 8px;
+}
+
+.pricing-table-container td.promo-info strong {
+    color: #fff; /* Wyróżnienie części tekstu promo */
+}
+
+
+.pricing-note {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.pricing-cta {
+    margin-top: 20px;
+}
+
+/* Poprawki dla mniejszych ekranów (opcjonalnie) */
+@media (max-width: 768px) {
+    .pricing-table-container {
+        padding: 20px;
+    }
+
+    .pricing-table-container th,
+    .pricing-table-container td {
+        padding: 12px 8px;
+        font-size: 0.95em; /* Nieco mniejsza czcionka */
+    }
+
+    .pricing-table-container td.price {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 500px) {
+   /* Opcja: Można tu dodać style, które zamienią tabelę w bloki dla bardzo małych ekranów,
+      ale prostsze rozwiązanie to pozwolić na przewijanie tabeli w poziomie.
+      Aby to włączyć, można dodać overflow-x: auto; do .pricing-table-container */
+   .pricing-table-container {
+        overflow-x: auto; /* Umożliwia przewijanie tabeli w poziomie na małych ekranach */
+   }
+}
