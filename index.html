@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Meta Pixel Code -->
-<script>
+<script type="text/plain" data-cookieconsent="marketing"> // <-- ZMIANA TUTAJ
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -31,9 +31,9 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-G511X4TD9K"></script>
-<script>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G511X4TD9K" type="text/plain" data-cookieconsent="analytics"></script>  // <-- ZMIANA TUTAJ
+<script type="text/plain" data-cookieconsent="analytics"> // <-- ZMIANA TUTAJ
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -42,6 +42,20 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
 </script>
    
 <body>
+     <!-- ========= BANER COOKIE START ========= -->
+    <div id="cookieConsentBanner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: #222; color: #fff; padding: 15px 20px; z-index: 9999; text-align: center; box-shadow: 0 -2px 5px rgba(0,0,0,0.2);">
+        <p style="margin: 0 0 10px 0; font-size: 14px;">
+            Ta strona wykorzystuje pliki cookies w celu analizy ruchu oraz realizacji usług. Kontynuując korzystanie z serwisu, zgadzasz się na ich użycie.
+            Więcej informacji znajdziesz w naszej <a href="/polityka-prywatnosci.html" style="color: #00bcd4; text-decoration: underline;">Polityce Prywatności</a>.
+            <!-- Uwaga: Musisz utworzyć stronę /polityka-prywatnosci.html -->
+        </p>
+        <button id="acceptCookiesBtn" style="background-color: #00bcd4; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer; font-weight: bold;">Akceptuję</button>
+        <button id="declineCookiesBtn" style="background-color: #555; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer;">Odrzucam</button>
+    </div>
+    <!-- ========= BANER COOKIE END ========= -->
+
+    <div class="vr-container">
+        <!-- Reszta Twojej strony -->
     <div class="vr-container">
         <nav class="vr-nav">
             <div class="logo">MoveVR</div>
@@ -484,5 +498,69 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
     </div>
 
     <script src="app.js"></script>
+
+    <!-- ========= SKRYPT OBSŁUGI COOKIE CONSENT START ========= -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const consentBanner = document.getElementById('cookieConsentBanner');
+        const acceptBtn = document.getElementById('acceptCookiesBtn');
+        const declineBtn = document.getElementById('declineCookiesBtn');
+        const cookieConsentKey = 'user_cookie_consent';
+
+        // Funkcja do aktywacji skryptów po wyrażeniu zgody
+        function activateTrackingScripts() {
+            // Aktywuj skrypty, które mają atrybut data-cookieconsent
+            // i których typ został zmieniony na np. 'text/plain'
+            document.querySelectorAll('script[type="text/plain"][data-cookieconsent]').forEach(function(scriptTag) {
+                // Sprawdzamy, czy zgoda na dany typ cookies została udzielona
+                // W tym prostym przykładzie akceptacja oznacza zgodę na wszystko,
+                // ale można to rozbudować o kategorie (np. marketing, analytics)
+                if (localStorage.getItem(cookieConsentKey) === 'accepted') {
+                    const newScript = document.createElement('script');
+                    // Kopiuj atrybuty, oprócz 'type' i 'data-cookieconsent'
+                    Array.from(scriptTag.attributes).forEach(attr => {
+                        if (attr.name !== 'type' && attr.name !== 'data-cookieconsent') {
+                            newScript.setAttribute(attr.name, attr.value);
+                        }
+                    });
+                    // Skopiuj zawartość skryptu (dla skryptów inline)
+                    if (scriptTag.innerHTML) {
+                        newScript.innerHTML = scriptTag.innerHTML;
+                    }
+                    // Zmień typ z powrotem na 'text/javascript', aby przeglądarka go wykonała
+                    newScript.type = 'text/javascript';
+                    scriptTag.parentNode.replaceChild(newScript, scriptTag); // Podmień stary skrypt nowym
+                    console.log('Activated script:', newScript.src || 'inline script');
+                }
+            });
+        }
+
+        // Sprawdź, czy użytkownik już podjął decyzję
+        const userConsent = localStorage.getItem(cookieConsentKey);
+
+        if (!userConsent) {
+            // Pokaż baner, jeśli nie ma decyzji
+            consentBanner.style.display = 'block';
+        } else if (userConsent === 'accepted') {
+            // Jeśli zgoda została już udzielona, aktywuj skrypty
+            activateTrackingScripts();
+        }
+        // Jeśli userConsent === 'declined', nic nie robimy ze skryptami śledzącymi
+
+        acceptBtn.addEventListener('click', function () {
+            localStorage.setItem(cookieConsentKey, 'accepted');
+            consentBanner.style.display = 'none';
+            activateTrackingScripts();
+        });
+
+        declineBtn.addEventListener('click', function () {
+            localStorage.setItem(cookieConsentKey, 'declined');
+            consentBanner.style.display = 'none';
+            // Tutaj nie aktywujemy skryptów śledzących
+            // Można by opcjonalnie załadować tylko niezbędne cookies, jeśli takie masz
+        });
+    });
+    </script>
+    <!-- ========= SKRYPT OBSŁUGI COOKIE CONSENT END ========= -->
 </body>
 </html>
