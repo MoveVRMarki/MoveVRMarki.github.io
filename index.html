@@ -6,6 +6,26 @@
     <meta name="description" content="MoveVR - Twój portal do wirtualnej rzeczywistości. Odkryj immersyjne doświadczenia VR w Warszawie.">
     <meta name="keywords" content="VR, wirtualna rzeczywistość, Oculus Quest, Meta Quest, VR Warszawa, gry VR">
     <title>MoveVR - Twój Portal do Wirtualnej Rzeczywistości</title>
+    
+    <!-- Google's Consent Mode V2 - Set default consent -->
+    <script>
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Set default consent to 'denied' as a placeholder
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+    
+    // Enable URL passthrough for better ad click measurement when cookies are denied
+    gtag('set', 'url_passthrough', true);
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Favicon -->
@@ -544,6 +564,14 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
         } else if (userConsent === 'accepted') {
             // Jeśli zgoda została już udzielona, aktywuj skrypty
             activateTrackingScripts();
+            
+            // Update Google's Consent Mode parameters
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+            });
         }
         // Jeśli userConsent === 'declined', nic nie robimy ze skryptami śledzącymi
 
@@ -551,13 +579,29 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
             localStorage.setItem(cookieConsentKey, 'accepted');
             consentBanner.style.display = 'none';
             activateTrackingScripts();
+            
+            // Update Google's Consent Mode when user accepts
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+            });
         });
 
         declineBtn.addEventListener('click', function () {
             localStorage.setItem(cookieConsentKey, 'declined');
             consentBanner.style.display = 'none';
-            // Tutaj nie aktywujemy skryptów śledzących
-            // Można by opcjonalnie załadować tylko niezbędne cookies, jeśli takie masz
+            // Update Google's Consent Mode when user declines
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            });
+            
+            // Enable ads data redaction when consent is denied
+            gtag('set', 'ads_data_redaction', true);
         });
     });
     </script>
