@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MoveVR - Twój portal do wirtualnej rzeczywistości. Odkryj immersyjne doświadczenia VR w Warszawie.">
-    <meta name="keywords" content="VR, wirtualna rzeczywistość, Oculus Quest, Meta Quest, VR Warszawa, gry VR">
-    <title>MoveVR - Twój Portal do Wirtualnej Rzeczywistości</title>
+    <meta name="description" content="Niezapomniane urodziny i eventy z mobilnym VR w Markach i okolicach. Gotowe pakiety na każdą okazję.">
+    <meta name="keywords" content="VR, urodziny VR, eventy firmowe VR, imprezy VR, wirtualna rzeczywistość Marki, Warszawa">
+    <title>MoveVR - Urodziny i Eventy z Wirtualną Rzeczywistością</title>
     
     <!-- Google's Consent Mode V2 - Set default consent -->
     <script>
-    // Define dataLayer and the gtag function.
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-
-    // Set default consent to 'denied' as a placeholder
     gtag('consent', 'default', {
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
@@ -21,8 +18,6 @@
       'analytics_storage': 'denied',
       'wait_for_update': 500
     });
-    
-    // Enable URL passthrough for better ad click measurement when cookies are denied
     gtag('set', 'url_passthrough', true);
     </script>
     
@@ -34,22 +29,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Meta Pixel Code -->
-<script type="text/plain" data-cookieconsent="marketing"> 
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1403524984294824');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <script type="text/plain" data-cookieconsent="marketing"> 
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1403524984294824');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G511X4TD9K" type="text/plain" data-cookieconsent="analytics"></script>  
@@ -62,36 +57,29 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
 </script>
    
 <body>
-     <!-- ========= BANER COOKIE START ========= -->
+    <!-- BANER COOKIE -->
     <div id="cookieConsentBanner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: #222; color: #fff; padding: 15px 20px; z-index: 9999; text-align: center; box-shadow: 0 -2px 5px rgba(0,0,0,0.2);">
         <p style="margin: 0 0 10px 0; font-size: 14px;">
-            Ta strona wykorzystuje pliki cookies w celu analizy ruchu oraz realizacji usług. Kontynuując korzystanie z serwisu, zgadzasz się na ich użycie.
-            Więcej informacji znajdziesz w naszej <a href="/polityka-prywatnosci.html" style="color: #00bcd4; text-decoration: underline;">Polityce Prywatności</a>.
-            <!-- Uwaga: Musisz utworzyć stronę /polityka-prywatnosci.html -->
+            Ta strona wykorzystuje pliki cookies w celu analizy ruchu oraz realizacji usług. Więcej informacji znajdziesz w naszej <a href="/polityka-prywatnosci.html" style="color: #00bcd4; text-decoration: underline;">Polityce Prywatności</a>.
         </p>
         <button id="acceptCookiesBtn" style="background-color: #00bcd4; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer; font-weight: bold;">Akceptuję</button>
         <button id="declineCookiesBtn" style="background-color: #555; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer;">Odrzucam</button>
     </div>
-    <!-- ========= BANER COOKIE END ========= -->
 
     <div class="vr-container">
-        <!-- Reszta Twojej strony -->
-    <div class="vr-container">
+        <!-- NAWIGACJA -->
         <nav class="vr-nav">
             <div class="logo">MoveVR</div>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#experiences">Doświadczenia</a></li>
-                <li><a href="#equipment">Sprzęt</a></li>
-                <li><a href="#gry">Gry</a></li>
-                <li><a href="#pricing">Cennik</a></li>
-                <li><a href="#about">O mnie</a></li>
+                <li><a href="#home" class="active">Start</a></li>
+                <li><a href="#packages">Pakiety</a></li>
+                <li><a href="#about">Dlaczego My?</a></li>
+                <li><a href="#gallery">Galeria</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
         </nav>
 
-        <!-- test-->
-        <!-- Preloader -->
+        <!-- PRELOADER -->
         <div class="preloader">
             <div class="loader">
                 <div class="loader-circle"></div>Ładowanie strony
@@ -99,323 +87,146 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
             </div>
         </div>
 
+        <!-- SEKCJA HERO -->
         <header id="home" class="vr-header">
             <div class="profile-overlay"></div>
             <div class="header-content">
                 <div class="profile-image">
-                    <img src="vrow-profile.jpg" alt="Profil VRowy">
+                    <img src="vrow-profile.jpg" alt="Logo MoveVR">
                 </div>
                 <div class="profile-info">
-                    <h1>Witaj w Świecie <span class="highlight">Wirtualnej Rzeczywistości</span></h1>
-                    <p class="tagline">Przekraczaj granice rzeczywistości, twórz niesamowite doświadczenia</p>
+                    <h1>Niezapomniane <span class="highlight">Urodziny i Eventy z VR</span> w Markach i Okolicach!</h1>
+                    <p class="tagline">Dostarczamy gotowe pakiety pełne emocji i wirtualnej zabawy prosto do Ciebie.</p>
                     <div class="cta-buttons">
-    <a href="#experiences" class="btn primary">
-        <i class="fas fa-vr-cardboard"></i> Odkryj więcej
-    </a>
-    <a href="https://movevr.booksy.com/h/" target="_blank" class="btn secondary">
-        <i class="fas fa-calendar-check"></i> Umów sesję
-    </a>
-    <!-- Google Calendar functionality is preserved but UI is hidden -->
-    <div style="display: none;">
-        <!-- Google Calendar Appointment Scheduling begin -->
-        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-        <!-- end Google Calendar Appointment Scheduling -->
-    </div>
-</div>
+                        <a href="#packages" class="btn primary">
+                            <i class="fas fa-box-open"></i> Zobacz Pakiety
+                        </a>
+                        <a href="https://movevr.booksy.com/h/" target="_blank" class="btn secondary">
+                            <i class="fas fa-calendar-check"></i> Rezerwuj Termin
+                        </a>
+                    </div>
                 </div>
             </div>
-
             <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <div class="arrow">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <div class="mouse"><div class="wheel"></div></div>
+                <div class="arrow"><span></span><span></span><span></span></div>
             </div>
         </header>
 
-       <main>
-    <!-- ========= SEKCJA 1: DOŚWIADCZENIA ========= -->
-    <section id="experiences" class="vr-section">
-        <h2 class="section-title">Wirtualne <span class="highlight">Doświadczenia</span></h2>
-        <div class="experience-cards">
-            <a href="#gallery" class="card">
-                <div class="card-icon"><i class="fas fa-vr-cardboard"></i></div>
-                <h3>Immersyjne podróże</h3>
-                <p>Stań na szczycie Mount Everest, poczuj bryzę na rajskiej plaży lub przespaceruj się po tętniących życiem ulicach Tokio. To więcej niż podróż – to przeżycie.</p>
-                <span class="card-link">Zobacz więcej <i class="fas fa-arrow-right"></i></span>
-            </a>
-            <a href="#gallery" class="card">
-                <div class="card-icon"><i class="fas fa-gamepad"></i></div>
-                <h3>Gry i Rozrywka</h3>
-                <p>Zostań mistrzem miecza świetlnego w Beat Saber lub weź udział w epickich strzelaninach. Nasza biblioteka gier to czysta adrenalina i niezapomniana zabawa.</p>
-                <span class="card-link">Zobacz więcej <i class="fas fa-arrow-right"></i></span>
-            </a>
-            <a href="#gallery" class="card">
-                <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                <h3>Edukacja i Trening</h3>
-                <p>Ucz się w sposób, który angażuje wszystkie zmysły. Prowadź skomplikowane operacje, trenuj wystąpienia publiczne lub odkrywaj tajemnice kosmosu w interaktywnym środowisku.</p>
-                <span class="card-link">Zobacz więcej <i class="fas fa-arrow-right"></i></span>
-            </a>
-        </div>
-    </section>
-
-    <!-- ========= SEKCJA 2: OPINIE ========= -->
-    <section id="testimonials" class="vr-section">
-        <h2 class="section-title">Co mówią nasi <span class="highlight">Goście?</span></h2>
-        <div class="testimonial-cards">
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left"></i>
-                <p class="testimonial-text">"Świetna zabawa, można się oderwać od rzeczywistości a przy okazji pozytywnie zmęczyć :)"</p>
-                <p class="testimonial-author">- Marta P</p>
-            </div>
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left"></i>
-                <p class="testimonial-text">"Wszystko super, polecam!"</p>
-                <p class="testimonial-author">- twoja-bajka</p>
-            </div>
-            <div class="testimonial-card">
-                <i class="fas fa-quote-left"></i>
-                <p class="testimonial-text">"Serdecznie polecam, fajnie miejsce i niezapomniane przeżycia!"</p>
-                <p class="testimonial-author">- Maciej P</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========= SEKCJA 3: GALERIA ========= -->
-    <section id="gallery" class="vr-section">
-        <h2 class="section-title">Zobacz to w <span class="highlight">Akcji</span></h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1593305842502-628bfac5554e?q=80&w=2070&auto=format&fit=crop" alt="Mężczyzna grający w grę VR z mieczami świetlnymi"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544333671-b44c04238541?q=80&w=2070&auto=format&fit=crop" alt="Kobieta eksplorująca wirtualny świat"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1639763389812-ab6f33989c45?q=80&w=2070&auto=format&fit=crop" alt="Widok z perspektywy gracza VR na futurystyczny krajobraz"></div>
-            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1535242274939-f463a5265a06?q=80&w=1974&auto=format&fit=crop" alt="Grupa przyjaciół śmiejąca się podczas gry VR"></div>
-        </div>
-    </section>
-
-    <!-- ========= SEKCJA 4: SPRZĘT ========= -->
-    <section id="equipment" class="vr-section equipment-section">
-        <h2 class="section-title">Nasz <span class="highlight">Sprzęt</span></h2>
-        <div class="equipment-content">
-            <div class="equipment-description">
-                <h3>Meta Oculus Quest 3 z systemem chłodzącym BOBOVR</h3>
-                <div class="equipment-specs">
-                    <div class="spec-item"><i class="fas fa-microchip"></i><span>Procesor Snapdragon XR2 Gen 2</span></div>
-                    <div class="spec-item"><i class="fas fa-memory"></i><span>8GB RAM</span></div>
-                    <div class="spec-item"><i class="fas fa-tv"></i><span>Rozdzielczość 4K+ na oko</span></div>
-                    <div class="spec-item"><i class="fas fa-battery-full"></i><span>Do 3 godzin pracy</span></div>
-                </div>
-                <p>Nasz zaawansowany zestaw wirtualnej rzeczywistości bazuje na najnowszej generacji gogli Meta Oculus Quest 3, które oferują niezrównaną jakość obrazu i komfort użytkowania. Dzięki rozdzielczości 4K+ i wydajnemu procesorowi, możesz cieszyć się płynnymi i realistycznymi doświadczeniami VR.</p>
-                <p>Aby zapewnić maksymalny komfort podczas długich sesji, wyposażyliśmy nasz zestaw w innowacyjny system chłodzący BOBOVR. Ta zaawansowana technologia skutecznie odprowadza ciepło i zapobiega przegrzewaniu się urządzenia, co znacząco zwiększa komfort użytkowania i pozwala na dłuższe sesje w wirtualnej rzeczywistości.</p>
-                <p><strong><i class="fas fa-shield-alt"></i> Bezpieczeństwo przede wszystkim:</strong> Zapewniamy pełną asekurację oraz wystarczająco dużo przestrzeni, abyś mógł w pełni i bezpiecznie zanurzyć się w wirtualnym świecie. Nasz system "Guardian" dba o to, byś nie opuścił wyznaczonej strefy gry.</p>
-                <div class="equipment-features">
-                    <span class="feature-tag">Bezprzewodowy</span>
-                    <span class="feature-tag">Śledzenie rąk</span>
-                    <span class="feature-tag">Rozszerzona rzeczywistość</span>
-                    <span class="feature-tag">Kontrolery dotykowe</span>
-                </div>
-            </div>
-            <div class="equipment-images">
-                <div class="equipment-image">
-                    <img src="zestaw.jpg" alt="Kompletny zestaw VR" class="zoom-effect">
-                    <p class="image-caption">Kompletny zestaw VR</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========= SEKCJA 5: GRY / ZAJĘCIA ========= -->
-    <section id="gry" class="vr-section equipment-section">
-        <h2 class="section-title">Nasze <span class="highlight">Gry i Zajęcia</span></h2>
-        <div class="equipment-content">
-            <div class="equipment-description">
-                <h3>🎮 Jakie gry VR znajdziecie w Move VR? 🎮</h3>
-                <p>Mamy dla Was ogromny wybór tytułów na Meta Quest 3, podzielonych na kategorie, aby każdy znalazł coś dla siebie! 😎</p>
-                <p>🔥 Coś dla fanów akcji: SUPERHOT VR, Pistol Whip, Arizona Sunshine...</p>
-                <p>🎵 Coś dla miłośników muzyki: Beat Saber, Synth Riders, Unplugged...</p>
-                <p>🤸 Coś dla aktywnych: Eleven Table Tennis, Creed: Rise to Glory, Les Mills Bodycombat...</p>
-                <p>🕵️ Coś dla detektywów: I Expect You To Die (1, 2 & 3)</p>
-                <p>🧱 Coś dla kreatywnych: Cooking Simulator VR, Job Simulator...</p>
-                <p>🤪 Coś dla szukających humoru: Drunkn Bar Fight, What the Bat?...</p>
-                <p>🐱 A nawet coś dla... miłośników kotów!: I Am Cat</p>
-                <p>Pełna lista gier jest zbyt długa, by ją tu zmieścić! 😉 Ale obiecujemy – nie będziecie się nudzić!</p>
-            </div>
-            <div class="equipment-images">
-                <div class="equipment-image">
-                    <img src="Mozaika gier.png" alt="Gry" class="zoom-effect">
-                    <p class="image-caption">Gry</p>
-                </div>
-            </div>
-        </div>
-        <div class="equipment-content" style="margin-top: 4rem;">
-            <div class="equipment-description">
-                <h3>💪 Zajęcia sportowe w Move VR 💪</h3>
-                <p>Masz ochotę na trening jak nigdy dotąd? Chcesz spróbować nowych dyscyplin sportowych w nietypowy sposób? A może po prostu szukasz świetnej zabawy i aktywnej rozrywki? 😎</p>
-                <p>Mamy coś IDEALNEGO dla Ciebie - ZAJĘCIA SPORTOWE W VR w Move VR! 🎉</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========= SEKCJA 6: TRAILER I MOŻLIWOŚCI ========= -->
-    <section id="trailer-video" class="vr-section">
-        <h2 class="section-title">Zobacz nasze <span class="highlight">Możliwości</span></h2>
-        <p class="section-subtitle">
-            Nasze stanowisko VR jest w pełni mobilne! Możemy je rozstawić w dowolnym, bezpiecznym miejscu – na evencie firmowym, w Twoim biurze, a nawet w sali gimnastycznej. To Ty decydujesz, gdzie zaczyna się przygoda!
-        </p>
-        <div class="youtube-container">
-            <iframe width="100%" height="500" src="https://www.youtube.com/embed/Tnk0psi352c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <!-- ========= SEKCJA 7: MINECRAFT ========= -->
-    <div class="minecraft-section-wrapper">
-        <div class="minecraft-video-section">
-            <div class="minecraft-overlay"></div>
-            <div class="minecraft-content">
-                <h2 class="section-title">Minecraft <span class="highlight">VR Experience</span></h2>
-                <div class="youtube-shorts-container">
-                    <iframe src="https://www.youtube.com/embed/VHsUcaR_3zk" title="YouTube Shorts player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ========= SEKCJA 8: CENNIK ========= -->
-    <section id="pricing" class="vr-section">
-        <h2 class="section-title">Nasz <span class="highlight">Cennik</span></h2>
-        <div class="pricing-table-container">
-            <p class="pricing-intro">
-                Zapraszamy do skorzystania z naszej oferty wynajmu stanowiska VR! Gwarantujemy niezapomniane wrażenia.
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Usługa</th>
-                        <th>Czas</th>
-                        <th>Cena</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Wynajem stanowiska VR</td>
-                        <td>Pierwsza godzina</td>
-                        <td class="price">70 zł</td>
-                    </tr>
-                    <tr>
-                        <td>Wynajem stanowiska VR</td>
-                        <td>Każda kolejna rozpoczęta godzina</td>
-                        <td class="price">60 zł</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="promo-info">
-                            <i class="fas fa-tags"></i> Pamiętaj o promocji <strong>-10zł/h na pierwszą sesję!</strong> Zapytaj o szczegóły.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="pricing-note">
-                Ceny dotyczą wynajmu jednego stanowiska VR (gogle Meta Quest 3 + kontrolery).<br>
-                W cenie dostęp do pełnej biblioteki gier i doświadczeń.
-            </p>
-            <div class="pricing-cta">
-                <a href="https://movevr.booksy.com/h/" target="_blank" class="btn secondary">
-                    <i class="fas fa-calendar-check"></i> Zarezerwuj termin już teraz!
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========= SEKCJA 9: O MNIE ========= -->
-    <section id="about" class="vr-section about-section">
-        <div class="about-content">
-            <div class="about-text">
-                <h2 class="section-title">O <span class="highlight">Mnie</span></h2>
-                <div class="about-quote">
-                    <i class="fas fa-quote-left"></i>
-                    <p>Wirtualna rzeczywistość to nie tylko technologia, to sposób na przeżywanie nowych doświadczeń i emocji.</p>
-                </div>
-                <p>Jestem pasjonatem technologii VR z wieloletnim doświadczeniem w tworzeniu immersyjnych doświadczeń cyfrowych. Moja przygoda z wirtualną rzeczywistością rozpoczęła się ponad 5 lat temu i od tego czasu nieustannie zgłębiam nowe możliwości, jakie oferuje ta rewolucyjna technologia.</p>
-                <p>Specjalizuję się w projektowaniu doświadczeń VR, które przekraczają granice konwencjonalnej rozrywki i edukacji. Moim celem jest tworzenie światów, które inspirują, uczą i dostarczają niezapomnianych wrażeń.</p>
-                <div class="about-skills">
-                    <div class="skill">
-                        <span class="skill-name">Projektowanie VR</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 95%"></div></div>
+        <main>
+            <!-- SEKCJA PAKIETÓW (NAJWAŻNIEJSZA) -->
+            <section id="packages" class="vr-section">
+                <h2 class="section-title">Wybierz Swoją <span class="highlight">Przeżycie</span></h2>
+                <div class="packages-container">
+                    <!-- PAKIET URODZINOWY -->
+                    <div class="package-card">
+                        <div class="package-icon">🎂</div>
+                        <h3 class="package-title">Urodzinowa Inwazja VR</h3>
+                        <p class="package-description">Najlepszy prezent na urodziny! Zapewniamy epicką dawkę gier i rywalizacji, które Twoje dziecko i jego goście zapamiętają na długo.</p>
+                        <div class="package-price">od 350 zł</div>
+                        <a href="https://movevr.booksy.com/h/" target="_blank" class="btn primary package-btn">Sprawdź Pakiet Urodzinowy</a>
                     </div>
-                    <div class="skill">
-                        <span class="skill-name">Tworzenie doświadczeń</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 90%"></div></div>
+                    <!-- PAKIET SPORTOWY -->
+                    <div class="package-card">
+                        <div class="package-icon">💪</div>
+                        <h3 class="package-title">Sportowe Wyzwanie VR</h3>
+                        <p class="package-description">Masz dość nudnych treningów? Spalaj kalorie i baw się świetnie przy boksie, tenisie czy fitnessie w wirtualnej rzeczywistości. </p>
+                        <div class="package-price">od 70 zł/h</div>
+                         <a href="https://movevr.booksy.com/h/" target="_blank" class="btn primary package-btn">Podejmij Wyzwanie</a>
                     </div>
-                    <div class="skill">
-                        <span class="skill-name">Edukacja VR</span>
-                        <div class="skill-bar"><div class="skill-level" style="width: 85%"></div></div>
+                    <!-- PAKIET RODZINNY -->
+                    <div class="package-card">
+                        <div class="package-icon">👨‍👩‍👧‍👦</div>
+                        <h3 class="package-title">Rodzinna Przygoda w VR</h3>
+                        <p class="package-description">Szukasz pomysłu na wspólny weekend? Odkrywajcie fantastyczne światy i rozwiązujcie zagadki razem. Zabawa dla każdego, bez względu na wiek.</p>
+                        <div class="package-price">od 120 zł</div>
+                        <a href="https://movevr.booksy.com/h/" target="_blank" class="btn primary package-btn">Odkryj Przygodę</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- ========= SEKCJA 10: KONTAKT ========= -->
-    <section id="contact" class="vr-section">
-        <h2 class="section-title">Skontaktuj się <span class="highlight">Ze Mną</span></h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:movevrmarki@gmail.com">movevrmarki@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Marki, Wspólna 40, 05-260, Polska</span>
-                    <span> MCER - Mareckie Centrum Edukacyjno-Rekreacyjne!</span>
-                </div>
-                <div class="contact-hours">
-                    <h4><i class="far fa-clock"></i> Godziny otwarcia</h4>
-                    <div class="hours-grid">
-                        <span>Sobota:</span>
-                        <span>18:00 - 20:00</span>
+            <!-- SEKCJA DLACZEGO MY (O NAS) -->
+            <section id="about" class="vr-section about-section">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">Dlaczego <span class="highlight">MOVE VR?</span></h2>
+                        <div class="about-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Jesteśmy pasjonatami, którzy wierzą, że wirtualna rzeczywistość to coś więcej niż tylko granie. To sposób na tworzenie niesamowitych wspomnień, zdrową rywalizację i wspólną zabawę.</p>
+                        </div>
+                        <p>Naszą misją jest dostarczanie gotowych, ekscytujących doświadczeń prosto do Ciebie. Dbamy o każdy szczegół – od najlepszego, bezpiecznego sprzętu, po gry, które gwarantują śmiech i emocje. Z nami masz pewność, że Twoje wydarzenie będzie wyjątkowe.</p>
+                        <p><strong><i class="fas fa-shield-alt"></i> Bezpieczeństwo przede wszystkim:</strong> Zapewniamy pełną asekurację oraz wystarczająco dużo przestrzeni, abyś mógł w pełni i bezpiecznie zanurzyć się w wirtualnym świecie. Nasz system "Guardian" dba o to, byś nie opuścił wyznaczonej strefy gry.</p>
                     </div>
                 </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/profile.php?id=61572027485277" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.tiktok.com/@_movevr_" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.instagram.com/movevrmarki/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1193.1963246726095!2d21.123118499999998!3d52.332486299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecf6539b207b7%3A0xa36d71fb6d236319!2sMove%20Vr!5e0!3m2!1spl!2spl!4v1710853988040!5m2!1spl!2spl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="booking-card">
-                <div class="card-badge">Promocja</div>
-                <h3>Chcesz umówić się na spotkanie?</h3>
-                <p>Kliknij poniżej, aby zarezerwować termin konsultacji VR</p>
-                <div class="booking-features">
-                    <div class="booking-feature"><i class="fas fa-check-circle"></i><span>Pierwsza sesja -10zł/h</span></div>
-                    <div class="booking-feature"><i class="fas fa-check-circle"></i><span>Bezpłatna konsultacja</span></div>
-                    <div class="booking-feature"><i class="fas fa-check-circle"></i><span>Elastyczne terminy</span></div>
-                </div>
-                <a href="https://movevr.booksy.com/h/" target="_blank" class="btn secondary" id="booking-btn-footer">
-                    <i class="fas fa-calendar-check"></i> Umów wizytę
-                </a>
-            </div>
-        </div>
-    </section>
-</main>
+            </section>
 
+            <!-- SEKCJA GALERIA WRAŻEŃ -->
+            <section id="gallery" class="vr-section">
+                <h2 class="section-title">Galeria <span class="highlight">Wrażeń</span></h2>
+                
+                <h3 class="gallery-subtitle">Tak wygląda nasza Urodzinowa Inwazja VR!</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1593305842502-628bfac5554e?q=80&w=2070&auto=format&fit=crop" alt="Gracz w trakcie gry VR"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1535242274939-f463a5265a06?q=80&w=1974&auto=format&fit=crop" alt="Grupa przyjaciół śmiejąca się podczas gry VR"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1544333671-b44c04238541?q=80&w=2070&auto=format&fit=crop" alt="Kobieta eksplorująca wirtualny świat"></div>
+                </div>
+
+                <h3 class="gallery-subtitle">Emocje podczas Sportowego Wyzwania!</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1639763389812-ab6f33989c45?q=80&w=2070&auto=format&fit=crop" alt="Trening bokserski w VR"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop" alt="Osoba w trakcie treningu"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1552674605-db6ffd5e259b?q=80&w=2070&auto=format&fit=crop" alt="Sportowa rywalizacja"></div>
+                </div>
+            </section>
+            
+            <!-- SEKCJA FINALNEGO WEZWANIA DO DZIAŁANIA -->
+            <section id="final-cta" class="vr-section">
+                <div class="final-cta-content">
+                    <h2>Gotowy na swoją przygodę w VR?</h2>
+                    <p>Nie czekaj! Sprawdź dostępne terminy i zarezerwuj pakiet, który dostarczy niezapomnianych emocji Tobie i Twoim bliskim.</p>
+                    <a href="https://movevr.booksy.com/h/" target="_blank" class="btn primary btn-large">
+                        <i class="fas fa-calendar-check"></i> Zobacz Pakiety i Rezerwuj Termin w Booksy!
+                    </a>
+                </div>
+            </section>
+
+            <!-- SEKCJA KONTAKT -->
+            <section id="contact" class="vr-section">
+                <h2 class="section-title">Masz Pytania? <span class="highlight">Skontaktuj się</span></h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:movevrmarki@gmail.com">movevrmarki@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Działamy mobilnie w Markach i okolicach!</span>
+                            <span>Dojedziemy do Ciebie – na event, do biura lub domu.</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61572027485277" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.tiktok.com/@_movevr_" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://www.instagram.com/movevrmarki/" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78076.6268307304!2d20.98223849187179!3d52.32766624948831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc815f5d371b%3A0x4426236b04314c4c!2sMarki!5e0!3m2!1spl!2spl!4v1716922570046!5m2!1spl!2spl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- STOPKA -->
         <footer class="vr-footer">
             <div class="footer-content">
                 <div class="footer-top">
                     <div class="footer-logo">MoveVR</div>
                     <div class="footer-nav">
-                        <a href="#home">Home</a>
-                        <a href="#experiences">Doświadczenia</a>
-                        <a href="#equipment">Sprzęt</a>
-                        <a href="#gry">Gry</a>
-                        <a href="#pricing">Cennik</a>
-                        <a href="#about">O mnie</a>
+                        <a href="#home">Start</a>
+                        <a href="#packages">Pakiety</a>
+                        <a href="#about">Dlaczego My?</a>
+                        <a href="#gallery">Galeria</a>
                         <a href="#contact">Kontakt</a>
                     </div>
                 </div>
@@ -437,15 +248,14 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
             </div>
         </footer>
 
-        <!-- Back to top button -->
+        <!-- PRZYCISK BACK TO TOP -->
         <button id="back-to-top" aria-label="Przewiń do góry">
             <i class="fas fa-chevron-up"></i>
         </button>
     </div>
 
+    <!-- SKRYPTY JS -->
     <script src="app.js"></script>
-
-    <!-- ========= SKRYPT OBSŁUGI COOKIE CONSENT START ========= -->
     <script>
     document.addEventListener('DOMContentLoaded', function () {
         const consentBanner = document.getElementById('cookieConsentBanner');
@@ -453,45 +263,30 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
         const declineBtn = document.getElementById('declineCookiesBtn');
         const cookieConsentKey = 'user_cookie_consent';
 
-        // Funkcja do aktywacji skryptów po wyrażeniu zgody
         function activateTrackingScripts() {
-            // Aktywuj skrypty, które mają atrybut data-cookieconsent
-            // i których typ został zmieniony na np. 'text/plain'
             document.querySelectorAll('script[type="text/plain"][data-cookieconsent]').forEach(function(scriptTag) {
-                // Sprawdzamy, czy zgoda na dany typ cookies została udzielona
-                // W tym prostym przykładzie akceptacja oznacza zgodę na wszystko,
-                // ale można to rozbudować o kategorie (np. marketing, analytics)
                 if (localStorage.getItem(cookieConsentKey) === 'accepted') {
                     const newScript = document.createElement('script');
-                    // Kopiuj atrybuty, oprócz 'type' i 'data-cookieconsent'
                     Array.from(scriptTag.attributes).forEach(attr => {
                         if (attr.name !== 'type' && attr.name !== 'data-cookieconsent') {
                             newScript.setAttribute(attr.name, attr.value);
                         }
                     });
-                    // Skopiuj zawartość skryptu (dla skryptów inline)
                     if (scriptTag.innerHTML) {
                         newScript.innerHTML = scriptTag.innerHTML;
                     }
-                    // Zmień typ z powrotem na 'text/javascript', aby przeglądarka go wykonała
                     newScript.type = 'text/javascript';
-                    scriptTag.parentNode.replaceChild(newScript, scriptTag); // Podmień stary skrypt nowym
-                    console.log('Activated script:', newScript.src || 'inline script');
+                    scriptTag.parentNode.replaceChild(newScript, scriptTag);
                 }
             });
         }
 
-        // Sprawdź, czy użytkownik już podjął decyzję
         const userConsent = localStorage.getItem(cookieConsentKey);
 
         if (!userConsent) {
-            // Pokaż baner, jeśli nie ma decyzji
             consentBanner.style.display = 'block';
         } else if (userConsent === 'accepted') {
-            // Jeśli zgoda została już udzielona, aktywuj skrypty
             activateTrackingScripts();
-            
-            // Update Google's Consent Mode parameters
             gtag('consent', 'update', {
                 'ad_storage': 'granted',
                 'ad_user_data': 'granted',
@@ -499,14 +294,11 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
                 'analytics_storage': 'granted'
             });
         }
-        // Jeśli userConsent === 'declined', nic nie robimy ze skryptami śledzącymi
 
         acceptBtn.addEventListener('click', function () {
             localStorage.setItem(cookieConsentKey, 'accepted');
             consentBanner.style.display = 'none';
             activateTrackingScripts();
-            
-            // Update Google's Consent Mode when user accepts
             gtag('consent', 'update', {
                 'ad_storage': 'granted',
                 'ad_user_data': 'granted',
@@ -518,27 +310,15 @@ src="https://www.facebook.com/tr?id=1403524984294824&ev=PageView&noscript=1"
         declineBtn.addEventListener('click', function () {
             localStorage.setItem(cookieConsentKey, 'declined');
             consentBanner.style.display = 'none';
-            // Update Google's Consent Mode when user declines
             gtag('consent', 'update', {
                 'ad_storage': 'denied',
                 'ad_user_data': 'denied',
                 'ad_personalization': 'denied',
                 'analytics_storage': 'denied'
             });
-            
-            // Enable ads data redaction when consent is denied
             gtag('set', 'ads_data_redaction', true);
         });
     });
     </script>
-    <!-- ========= SKRYPT OBSŁUGI COOKIE CONSENT END ========= -->
-
-    <!-- Visit Counter 
-    <div id="visitor-counter">
-        <p>Visitors: <span id="count">0</span></p>
-    </div>
-    -->
-    <!-- Counter Script -->
-    <script src="js/counter.js"></script>
 </body>
 </html>
