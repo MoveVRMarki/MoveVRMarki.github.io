@@ -3,97 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOVE VR - Linki</title>
+    <meta name="description" content="MoveVR - Wszystkie linki w jednym miejscu. Zarezerwuj sesję VR, dołącz do Discorda, śledź nas w social mediach!">
+    <title>MoveVR - Linki</title>
+
+    <!-- Kody śledzące z Twojej głównej strony -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G511X4TD9K"></script>  
+    <script> 
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G511X4TD9K');
+    </script>
+    <script> 
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1403524984294824');
+    fbq('track', 'PageView');
+    </script>
+    <!-- Koniec kodów śledzących -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Styl dla strony - ciemny motyw i neony */
-        body { 
-            background-color: #0b0c10; 
-            color: #ffffff; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            margin: 0; 
-            padding: 40px 20px; 
+        /* Specjalne style tylko dla tej podstrony "Linktree" */
+        body.link-tree-page {
+            margin: 0;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            background-color: #0d0d0d;
+            background-image: radial-gradient(circle at 50% 0%, #1e1b3a 0%, #0d0d0d 60%);
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        
-        /* Styl dla logo */
-        .profile-pic { 
-            width: 120px; 
-            height: 120px; 
-            border-radius: 50%; 
-            border: 3px solid #66fcf1; 
-            box-shadow: 0 0 15px rgba(102, 252, 241, 0.5); 
+
+        .links-container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Sekcja nagłówka (Profil) */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-pic {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
             object-fit: cover;
+            border: 2px solid #00bcd4; /* Twój turkusowy akcent */
+            padding: 3px;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
         }
 
-        h1 { margin-top: 20px; font-size: 26px; letter-spacing: 2px; text-shadow: 0 0 5px #45a29e; }
-        p { color: #c5c6c7; margin-bottom: 30px; font-size: 16px; }
+        .profile-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+        }
 
-        /* Kontener na przyciski */
-        .links-container { 
-            display: flex; 
-            flex-direction: column; 
-            width: 100%; 
-            max-width: 400px; /* Idealne na telefony */
-            gap: 15px; 
+        .profile-desc {
+            font-size: 0.95rem;
+            color: #cccccc;
+            margin: 0 0 1rem 0;
+            line-height: 1.5;
+            white-space: pre-line;
+        }
+
+        /* Małe ikonki social media pod opisem */
+        .top-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .top-socials a {
+            color: #ffffff;
+            font-size: 1.6rem;
+            text-decoration: none;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .top-socials a:hover {
+            transform: scale(1.15);
+            color: #00bcd4;
+        }
+
+        /* Kontener na duże przyciski */
+        .buttons-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
 
         /* Standardowy przycisk */
-        .link-btn { 
-            display: block; 
-            padding: 16px 20px; 
-            background-color: #1f2833; 
-            color: #ffffff; 
-            text-decoration: none; 
+        .lt-btn {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .lt-btn:hover {
+            background-color: #252525;
+            transform: scale(1.02);
+            border-color: #555;
+        }
+
+        .btn-icon {
+            font-size: 1.5rem;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-text {
+            flex-grow: 1;
             text-align: center;
-            border: 1px solid #45a29e; 
-            border-radius: 30px; 
-            font-weight: bold; 
-            font-size: 16px;
-            transition: 0.3s; 
+            font-weight: 600;
+            font-size: 1rem;
+            padding-right: 30px; /* Kompensacja ikony dla wyśrodkowania tekstu */
         }
 
-        .link-btn:hover { 
-            background-color: #66fcf1; 
-            color: #0b0c10; 
-            box-shadow: 0 0 15px #66fcf1; 
+        /* Przycisk Discord z podtytułem */
+        .lt-btn-discord {
+            padding: 0.8rem 1.2rem;
+        }
+        .discord-text-wrapper {
+            flex-grow: 1;
+            text-align: center;
+            padding-right: 30px;
+        }
+        .discord-title {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .discord-sub {
+            font-size: 0.75rem;
+            color: #aaaaaa;
+            font-weight: 400;
+            margin-top: 2px;
         }
 
-        /* Specjalny przycisk Booksy (wyróżniony) */
-        .link-btn.booksy { 
-            border: 2px solid #ff00ff; /* Neonowy róż */
-            box-shadow: 0 0 10px rgba(255, 0, 255, 0.3); 
+        /* Przycisk Donate z obrazkiem */
+        .lt-btn-donate {
+            flex-direction: column;
+            padding: 0;
+            overflow: hidden;
         }
-
-        .link-btn.booksy:hover { 
-            background-color: #ff00ff; 
-            color: #ffffff; 
-            box-shadow: 0 0 20px #ff00ff; 
-        }
-    </style>
-</head>
-<body>
-
-    <!-- TUTAJ MOŻESZ ZMIENIĆ ZDJĘCIE (podmień link w src="") -->
-    <img src="https://movevrmarki.github.io/images/logo.png" alt="MOVE VR Logo" class="profile-pic" onerror="this.src='https://via.placeholder.com/120/0b0c10/66fcf1?text=MOVE+VR'">
-
-    <h1>MOVE VR</h1>
-    <p>Wybierz swoją przygodę 👇</p>
-
-    <div class="links-container">
-        <!-- WKLEJ SWOJE LINKI W MIEJSCE '#' W PARAMETRZE href="" -->
-        
-        <a href="https://booksy.com/pl-pl/299701_move-vr-marki_trening-i-dieta_4299_marki#ba_s=vl_1" class="link-btn booksy" target="_blank">📅 Zarezerwuj sesję w Booksy</a>
-        
-        <a href="https://movevrmarki.github.io/" class="link-btn" target="_blank">🌐 Strona Główna (Oferta)</a>
-        
-        <a href="https://www.facebook.com/profile.php?id=61572027485277" class="link-btn" target="_blank">🔵 Facebook</a>
-        
-        <a href="#" class="link-btn" target="_blank">📸 Instagram</a>
-        
-        <a href="#" class="link-btn" target="_blank">🎵 TikTok</a>
-    </div>
-
-</body>
-</html>
+        .lt-btn-donate img {
+            width: 100%;
+            height: auto;
+            border-
