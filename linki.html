@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVE VR - Linki</title>
+    <style>
+        /* Styl dla strony - ciemny motyw i neony */
+        body { 
+            background-color: #0b0c10; 
+            color: #ffffff; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            margin: 0; 
+            padding: 40px 20px; 
+        }
+        
+        /* Styl dla logo */
+        .profile-pic { 
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            border: 3px solid #66fcf1; 
+            box-shadow: 0 0 15px rgba(102, 252, 241, 0.5); 
+            object-fit: cover;
+        }
+
+        h1 { margin-top: 20px; font-size: 26px; letter-spacing: 2px; text-shadow: 0 0 5px #45a29e; }
+        p { color: #c5c6c7; margin-bottom: 30px; font-size: 16px; }
+
+        /* Kontener na przyciski */
+        .links-container { 
+            display: flex; 
+            flex-direction: column; 
+            width: 100%; 
+            max-width: 400px; /* Idealne na telefony */
+            gap: 15px; 
+        }
+
+        /* Standardowy przycisk */
+        .link-btn { 
+            display: block; 
+            padding: 16px 20px; 
+            background-color: #1f2833; 
+            color: #ffffff; 
+            text-decoration: none; 
+            text-align: center;
+            border: 1px solid #45a29e; 
+            border-radius: 30px; 
+            font-weight: bold; 
+            font-size: 16px;
+            transition: 0.3s; 
+        }
+
+        .link-btn:hover { 
+            background-color: #66fcf1; 
+            color: #0b0c10; 
+            box-shadow: 0 0 15px #66fcf1; 
+        }
+
+        /* Specjalny przycisk Booksy (wyróżniony) */
+        .link-btn.booksy { 
+            border: 2px solid #ff00ff; /* Neonowy róż */
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.3); 
+        }
+
+        .link-btn.booksy:hover { 
+            background-color: #ff00ff; 
+            color: #ffffff; 
+            box-shadow: 0 0 20px #ff00ff; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TUTAJ MOŻESZ ZMIENIĆ ZDJĘCIE (podmień link w src="") -->
+    <img src="https://movevrmarki.github.io/images/logo.png" alt="MOVE VR Logo" class="profile-pic" onerror="this.src='https://via.placeholder.com/120/0b0c10/66fcf1?text=MOVE+VR'">
+
+    <h1>MOVE VR</h1>
+    <p>Wybierz swoją przygodę 👇</p>
+
+    <div class="links-container">
+        <!-- WKLEJ SWOJE LINKI W MIEJSCE '#' W PARAMETRZE href="" -->
+        
+        <a href="https://booksy.com/pl-pl/299701_move-vr-marki_trening-i-dieta_4299_marki#ba_s=vl_1" class="link-btn booksy" target="_blank">📅 Zarezerwuj sesję w Booksy</a>
+        
+        <a href="https://movevrmarki.github.io/" class="link-btn" target="_blank">🌐 Strona Główna (Oferta)</a>
+        
+        <a href="https://www.facebook.com/profile.php?id=61572027485277" class="link-btn" target="_blank">🔵 Facebook</a>
+        
+        <a href="#" class="link-btn" target="_blank">📸 Instagram</a>
+        
+        <a href="#" class="link-btn" target="_blank">🎵 TikTok</a>
+    </div>
+
+</body>
+</html>
