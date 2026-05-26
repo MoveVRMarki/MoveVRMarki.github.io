@@ -179,4 +179,125 @@
         .lt-btn-donate img {
             width: 100%;
             height: auto;
-            border-
+            border-bottom: 1px solid #333;
+            background-color: white; /* Białe tło dla grafiki donate jak na screenie */
+        }
+        .donate-text {
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Kolory ikon */
+        .fa-facebook { color: #1877F2; }
+        .fa-instagram { 
+            background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .fa-tiktok { color: #fff; filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4); }
+        .fa-twitch { color: #9146FF; }
+        .fa-discord { color: #ffffff; }
+        .fa-vr-cardboard { color: #00bcd4; } /* Kolor Twojej strony */
+        .icon-kick { color: #53FC18; font-weight: 900; font-family: sans-serif; font-style: italic; letter-spacing: -1px; }
+
+        /* Stopka / powrót na stronę główną */
+        .bottom-branding {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .bottom-branding a {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .bottom-branding a:hover {
+            color: #00bcd4;
+        }
+    </style>
+</head>
+<body class="link-tree-page">
+
+    <div class="links-container">
+        
+        <!-- NAGŁÓWEK (LOGO I OPIS) -->
+        <div class="profile-header">
+            <!-- Pobiera logo z Twojego serwera -->
+            <img src="vrow-profile.jpg" alt="MoveVR Logo" class="profile-pic">
+            <h1 class="profile-title">MoveVR</h1>
+            <p class="profile-desc">Salon gier VR, Marki(pod Warszawą)<br>Zapraszam do rezerwacji terminów ;)</p>
+            
+            <div class="top-socials">
+                <a href="https://www.instagram.com/movevrmarki" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@_movevr_" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.twitch.tv/movevrmarki" target="_blank" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+            </div>
+        </div>
+
+        <!-- PRZYCISKI Z LINKAMI -->
+        <div class="buttons-wrapper">
+            
+            <!-- DISCORD -->
+            <a href="https://discord.gg/kwYC4tK9br" target="_blank" class="lt-btn lt-btn-discord">
+                <div class="btn-icon"><i class="fab fa-discord"></i></div>
+                <div class="discord-text-wrapper">
+                    <div class="discord-title">MOVE VR</div>
+                    <div class="discord-sub">Discord Server • Free to join</div>
+                </div>
+            </a>
+
+            <!-- DONATE BANNER -->
+            <a href="https://tipply.pl/@movevr" target="_blank" class="lt-btn lt-btn-donate">
+                <!-- ODKOMENTUJ LINIĘ PONIŻEJ I ZMIEŃ NAZWĘ PLIKU, JEŚLI WGRASZ GRAFIKĘ "DONATE" NA GITHUB -->
+                <!-- <img src="donate.png" alt="Donate Banner"> -->
+                <div class="donate-text">Donate</div>
+            </a>
+
+            <!-- FACEBOOK -->
+            <a href="https://www.facebook.com/profile.php?id=61572027485277" target="_blank" class="lt-btn">
+                <div class="btn-icon"><i class="fab fa-facebook"></i></div>
+                <div class="btn-text">Facebook</div>
+            </a>
+
+            <!-- TIKTOK -->
+            <a href="https://www.tiktok.com/@_movevr_" target="_blank" class="lt-btn">
+                <div class="btn-icon"><i class="fab fa-tiktok"></i></div>
+                <div class="btn-text">TikTok</div>
+            </a>
+
+            <!-- KICK -->
+            <a href="https://kick.com/movevrmarki" target="_blank" class="lt-btn">
+                <div class="btn-icon icon-kick">K</div>
+                <div class="btn-text">Kick</div>
+            </a>
+
+            <!-- STRONA GŁÓWNA -->
+            <a href="index.html" class="lt-btn">
+                <div class="btn-icon"><i class="fas fa-vr-cardboard"></i></div>
+                <div class="btn-text">Strona</div>
+            </a>
+
+            <!-- TWITCH -->
+            <a href="https://www.twitch.tv/movevrmarki" target="_blank" class="lt-btn">
+                <div class="btn-icon"><i class="fab fa-twitch"></i></div>
+                <div class="btn-text">Twitch</div>
+            </a>
+
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/movevrmarki" target="_blank" class="lt-btn">
+                <div class="btn-icon"><i class="fab fa-instagram"></i></div>
+                <div class="btn-text">Instagram</div>
+            </a>
+
+        </div>
+
+        <div class="bottom-branding">
+            <a href="index.html">© 2025 MoveVR</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
