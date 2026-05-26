@@ -89,6 +89,7 @@
         .top-socials {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 1.2rem;
             margin-bottom: 1.5rem;
         }
@@ -98,6 +99,9 @@
             font-size: 1.6rem;
             text-decoration: none;
             transition: transform 0.2s ease, color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .top-socials a:hover {
@@ -232,13 +236,21 @@
             <div class="top-socials">
                 <a href="https://www.instagram.com/movevrmarki" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.tiktok.com/@_movevr_" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.twitch.tv/movevrmarki" target="_blank" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+                <!-- IKONKA KICK ZAMIAST TWITCH -->
+                <a href="https://kick.com/movevrmarki" target="_blank" aria-label="Kick" style="text-decoration: none; display: inline-flex; align-items: center;"><span class="icon-kick" style="font-size: 1.6rem; vertical-align: middle;">K</span></a>
             </div>
         </div>
 
         <!-- PRZYCISKI Z LINKAMI -->
         <div class="buttons-wrapper">
             
+            <!-- DONATE (PRZENIESIONY NA GÓRĘ) -->
+            <a href="https://tipply.pl/@movevr" target="_blank" class="lt-btn lt-btn-donate">
+                <!-- ODKOMENTUJ LINIĘ PONIŻEJ I ZMIEŃ NAZWĘ PLIKU, JEŚLI WGRASZ GRAFIKĘ "DONATE" NA GITHUB -->
+                <!-- <img src="donate.png" alt="Donate Banner"> -->
+                <div class="donate-text">Donate</div>
+            </a>
+
             <!-- DISCORD -->
             <a href="https://discord.gg/kwYC4tK9br" target="_blank" class="lt-btn lt-btn-discord">
                 <div class="btn-icon"><i class="fab fa-discord"></i></div>
@@ -246,13 +258,6 @@
                     <div class="discord-title">MOVE VR</div>
                     <div class="discord-sub">Discord Server • Free to join</div>
                 </div>
-            </a>
-
-            <!-- DONATE BANNER -->
-            <a href="https://tipply.pl/@movevr" target="_blank" class="lt-btn lt-btn-donate">
-                <!-- ODKOMENTUJ LINIĘ PONIŻEJ I ZMIEŃ NAZWĘ PLIKU, JEŚLI WGRASZ GRAFIKĘ "DONATE" NA GITHUB -->
-                <!-- <img src="donate.png" alt="Donate Banner"> -->
-                <div class="donate-text">Donate</div>
             </a>
 
             <!-- FACEBOOK -->
